@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import java.sql.SQLOutput;
-
 public class MainApp {
     public static void main(String[] args) {
         // exercise #1 - find the highest salary
@@ -22,7 +20,8 @@ public class MainApp {
         double radius = 7.5;
         double area = Math.PI * Math.pow(radius, 2);
 
-        System.out.println("The area of the circle is" + " "+ area);
+        System.out.printf("The area of the circle is %.3f%n", area); // /n to go to the next line and f means float
+
 
         // exercise #4 - find and display the square root a variable after it is set to 5.0
         double variable = 5;
@@ -43,15 +42,11 @@ public class MainApp {
         System.out.println( "The positive value of " + value + " is = " + " " + positiveValue);
 
         // exercise #7 - find and display a random number between 0 and 1
-        double numberOne = 0;
-        double numberTwo = 1;
+//        double numberOne = 0;
+//        double numberTwo = 1;
         double randomNumber = Math.random();
         System.out.println("The random number between 0 and 1 is " + randomNumber);
 
-
-
     }
-
-
 
 }
