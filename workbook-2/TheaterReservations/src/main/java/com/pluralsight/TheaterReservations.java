@@ -9,7 +9,7 @@ public class TheaterReservations {
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("Please enter your name: ");
-        String customerName = myScanner.nextLine();
+        String [] customerName = myScanner.nextLine().trim().split(" ");
 
         System.out.println("What date will you be coming (MM/DD/YYYY): ");
         String customerDate = myScanner.nextLine();
@@ -22,9 +22,11 @@ public class TheaterReservations {
         //or      int numberOfTickets = myScanner.nextInt();
         //        myScanner.nextLine();
 
-        if ( customerName.equals("Geri Johnson") && convertedDate.equals(LocalDate.parse("2023-05-13"))) {
-            String amountOfTickets = numberOfTickets == 1 ? "ticket" : "tickets"; // if 1- ticket else -tickets
-            System.out.println(numberOfTickets + " " + amountOfTickets + " reserved for " + convertedDate + " under " + customerName);
+        if ( numberOfTickets > 1 ) {
+            System.out.println( numberOfTickets + " tickets reserved for " + convertedDate + " under " + customerName [1] + ", " + customerName[0]);
+            }else{
+            System.out.println( "1 ticket reserved for " + convertedDate + " under " + customerName [1] + ", " + customerName[0]);
+
         }
         myScanner.close();
 
