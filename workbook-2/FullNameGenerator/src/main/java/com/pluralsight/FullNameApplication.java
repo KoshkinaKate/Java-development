@@ -6,59 +6,55 @@ public class FullNameApplication {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
+        System.out.println("Please enter your name below ");
+
+//        if I want to use Scanner within main method:
+//        System.out.print("Please enter first name: ");
+//        String firstName= myScanner.nextLine().trim(); this line to store value
+
         String returnFirstName = firstName(myScanner);
         String returnMiddleName = middleName(myScanner);
         String returnLastName = lastName(myScanner);
         String returnSuffix = suffix(myScanner);
 
-        callingName(returnFirstName, returnMiddleName, returnLastName, returnSuffix);
+        String fullName = returnFirstName;
 
-        String fullName = returnFirstName +" " + returnMiddleName + " " + returnLastName+ " " + returnSuffix;
+// Add middle name initial if provided
+        if (!returnMiddleName.isEmpty()) {
+            fullName += " " + returnMiddleName.charAt(0) + ".";
+        }
+
+// Add the last name
+        fullName += " " + returnLastName;
+
+// Add the suffix if provided, with a comma if it starts with "P"
+        if (!returnSuffix.isEmpty()) {
+            fullName += ", " + returnSuffix;
+        }
+
         System.out.println("Full name: " + fullName);
 
     }
 
-    public static void callingName(String firstName, String middleName, String lastName, String suffix) {
-        System.out.println("First name : " + firstName);
-        System.out.println("Middle name : " + middleName);
-        System.out.println("Last name : " + lastName);
-        System.out.println("Suffix : " + suffix);
-    }
-
     public static String firstName(Scanner myScanner) {
         System.out.println("Please enter your first name : ");
-        return myScanner.nextLine();
+        return myScanner.nextLine().trim();
     }
 
     public static String middleName(Scanner myScanner) {
         System.out.println("Please enter your middle name : ");
-        return myScanner.nextLine();
+        return myScanner.nextLine().trim();
     }
 
     public static String lastName(Scanner myScanner) {
         System.out.println("Please enter your last name : ");
-        return myScanner.nextLine();
+        return myScanner.nextLine().trim();
     }
 
     public static String suffix(Scanner myScanner) {
         System.out.println("Please enter your suffix : ");
-        return myScanner.nextLine();
+        return myScanner.nextLine().trim();
     }
 
-//    public static String commaForSuffix() {
-//        if (suffix.toUpperCase().startsWith("P")) {
-//            return ",";
-//        } else {
-//            return "";
-//        }
-//    }
-
-    public static String trimLastName (String lastName){
-        if (lastName.length() > 7) {
-            return lastName.substring(0,7);
-        } else{
-            return lastName;
-        }
-    }
 
 }
