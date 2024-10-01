@@ -12,22 +12,22 @@ public class FullNameApplication {
 //        System.out.print("Please enter first name: ");
 //        String firstName= myScanner.nextLine().trim(); this line to store value
 
-        String returnFirstName = firstName(myScanner);
+        String returnFirstName = firstName(myScanner); //creating a place where to store method from outside of Main function + calling this function
         String returnMiddleName = middleName(myScanner);
         String returnLastName = lastName(myScanner);
         String returnSuffix = suffix(myScanner);
 
-        String fullName = returnFirstName;
+        String fullName = returnFirstName; //initializing fullName variable with value from line 15- to create complete name
 
 // Add middle name initial if provided
-        if (!returnMiddleName.isEmpty()) {
+        if (!returnMiddleName.isEmpty()) { //check is Mid Name is NOT empty , extracts first letter , += - adding a new value to existing fullName
             fullName += " " + returnMiddleName.charAt(0) + ".";
         }
 
-// Add the last name
+// Add the last name to already existed code before with first and middle name
         fullName += " " + returnLastName;
 
-// Add the suffix if provided, with a comma if it starts with "P"
+// Add the suffix if provided , checks if it is NOT empty
         if (!returnSuffix.isEmpty()) {
             fullName += ", " + returnSuffix;
         }
