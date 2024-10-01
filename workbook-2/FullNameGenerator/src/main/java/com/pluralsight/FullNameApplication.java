@@ -34,6 +34,8 @@ public class FullNameApplication {
 
         System.out.println("Full name: " + fullName);
 
+        myScanner.close();
+
     }
 
     public static String firstName(Scanner myScanner) {
@@ -55,6 +57,7 @@ public class FullNameApplication {
         System.out.println("Please enter your suffix : ");
         return myScanner.nextLine().trim();
     }
+
 
 
 }
