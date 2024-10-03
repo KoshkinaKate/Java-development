@@ -6,6 +6,7 @@ public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone customer = new CellPhone();
         CellPhone customer2 = new CellPhone();
+        CellPhone customer3 = new CellPhone();
 
         Scanner myScanner = new Scanner(System.in);
 
@@ -57,15 +58,31 @@ public class CellPhoneApplication {
         String ownerInput2 = myScanner.nextLine();
         customer2.setOwner(ownerInput2);
 
+        System.out.println("==========================");
+
+        customer3.setSerialNumber(134578903);
+        customer3.setModel("iPhone 16 Pro Max");
+        customer3.setCarrier("Verizon");
+        customer3.setPhoneNumber("000-000-0000");
+        customer3.setOwner("Kate Koshkina");
+
+
+
         // Display properties of both phones
         display(customer);
         display(customer2);
+        display(customer3);
 
         // Dial between the two phones
         customer.dial(customer2.getPhoneNumber());
         customer2.dial(customer.getPhoneNumber());
+        customer3.dial(customer2.getPhoneNumber());
 
         myScanner.close();
+
+        customer3.dial(customer2);//find customer phone # and dial it
+
+
     }
 
     // Static method to display phone properties
