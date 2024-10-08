@@ -7,7 +7,10 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
-        System.out.println("Please enter a book you would like to read\n");
+        System.out.println("Please enter a book you would like to read: \n");
+        String pickStory = myScanner.nextLine().toLowerCase();
+//        myScanner.nextLine();
+
 
         try {
             FileInputStream goldilocksFile = new FileInputStream("goldilocks.txt");
