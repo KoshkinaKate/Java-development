@@ -18,5 +18,8 @@ public class Product {
     public double getPrice() {
         return this.price;
     }
+    public String toString() {
+        return String.format("id: %d %s - Price: $%.2f", id, name, price);
+    }
 }
 
