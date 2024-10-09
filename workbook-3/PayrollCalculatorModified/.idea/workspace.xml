@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b786cd-d8c0-4c92-bcc1-8bbb8fb7577a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../PayrollCalculator/src/main/java/com/pluralsight/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PayrollCalculator/src/main/java/com/pluralsight/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../workbook-2/vehicleInventory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-2/vehicleInventory/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Payroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Payroll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2nAMuzHz7Zrh76p0yzc5LL97WPO" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -35,11 +38,32 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Payroll.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Payroll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pluralsight.Payroll" />
+      <module name="PayrollCalculatorModified" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pluralsight.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Payroll" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

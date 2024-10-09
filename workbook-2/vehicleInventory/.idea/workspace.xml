@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ff96b2-3901-44ff-a5a0-250871833f2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/VehicleInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/VehicleInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../workbook-3/PayrollCalculator/src/main/java/com/pluralsight/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-3/PayrollCalculator/src/main/java/com/pluralsight/main.java" afterDir="false" />
-    </list>
+    <list default="true" id="43ff96b2-3901-44ff-a5a0-250871833f2b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
