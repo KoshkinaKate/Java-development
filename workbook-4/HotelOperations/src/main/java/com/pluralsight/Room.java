@@ -5,14 +5,13 @@ public class Room {
     private double price;
     private boolean isOccupied;
     private boolean isDirty;
-    private boolean isAvailable;
 
-    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty, boolean isAvailable) {
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.isOccupied = isOccupied;
-        this.isDirty = isDirty;
-        this.isAvailable = isAvailable;
+        this.isOccupied = isOccupied; //might be false because it is initially not occupied
+        this.isDirty = isDirty; //same here
+
     }
 //Getters
     public int getNumberOfBeds() {
@@ -30,11 +29,11 @@ public class Room {
     public boolean isDirty() {
         return isDirty;
     }
-
-    public boolean isAvailable() {
-        return isAvailable;
+    //Derived getter
+    public boolean isAvailable(){
+        return !isDirty && !isOccupied;
     }
-//Backing getters
+    //Derived getter
     public String getDeterminePrice(){
         return "Rooms with" + numberOfBeds + "cost" + price;
     }
