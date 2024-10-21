@@ -7,7 +7,8 @@
     <list default="true" id="7344c1c5-6545-41cd-9835-91d7ffcbb42d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../workbook-3/SearchInventoryMap/src/main/java/com/pluralsight/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-3/SearchInventoryMap/src/main/java/com/pluralsight/StoreApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Reservation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

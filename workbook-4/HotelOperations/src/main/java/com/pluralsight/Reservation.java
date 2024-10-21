@@ -46,11 +46,16 @@ public class Reservation {
         }else if (roomType.equalsIgnoreCase("double")){
             roomPrice = 124.00;
         }
-        if (isWeekend) {
-            roomPrice *= 1.10;
-        }
+//        if (isWeekend) {
+//            roomPrice *= 1.10;
+//        }
     }
+    //derived getter
     public double getReservationTotal (){
-        return roomPrice * numberOfNights;
+        double totalPrice = roomPrice * numberOfNights;
+        if (isWeekend) {
+            totalPrice *= 1.1;
+        }
+        return totalPrice;
     }
 }
