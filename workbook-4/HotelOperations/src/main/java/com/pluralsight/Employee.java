@@ -35,16 +35,27 @@ public class Employee {
         return hoursWorked;
     }
 
-
-    public double getTotalPay(){
-
+    public double getTotalPay() {
+        if (hoursWorked <= 40) {
+            return hoursWorked * payRate;
+        } else {
+            return (40 * payRate) + ((hoursWorked - 40) * (payRate * 1.5));
+        }
     }
 
-    public double getRegularHours(){
-        if (hoursWorked <= 40){
+    public double getRegularHours() {
+        if (hoursWorked <= 40) {
             return hoursWorked;
-        }else {
+        } else {
             return 40;
+        }
+    }
+
+    public double getOvertimeHours() {
+        if (hoursWorked > 40) {
+            return hoursWorked - 40;
+        } else {
+            return 0;
         }
     }
 }
