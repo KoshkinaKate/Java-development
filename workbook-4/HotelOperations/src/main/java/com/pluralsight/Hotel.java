@@ -7,20 +7,21 @@ public class Hotel {
     private int bookedSuites;
     private int bookedBasicRooms;
 
+
     public Hotel(String name, int numberOfSuites, int numberOfRooms) {
         this.name = name;
         this.numberOfSuites = numberOfSuites;
         this.numberOfRooms = numberOfRooms;
-        this.bookedSuites =0;
-        this.bookedBasicRooms=0;
+        this.bookedSuites = 0;
+        this.bookedBasicRooms = 0;
     }
 
-    public Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms) {
+    public Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedRooms) {
         this.name = name;
         this.numberOfSuites = numberOfSuites;
         this.numberOfRooms = numberOfRooms;
         this.bookedSuites = bookedSuites;
-        this.bookedBasicRooms = bookedBasicRooms;
+        this.bookedBasicRooms = bookedRooms;
     }
 
     public String getName() {
@@ -42,18 +43,32 @@ public class Hotel {
     public int getBookedBasicRooms() {
         return bookedBasicRooms;
     }
-    public int getAvailableSuites(){
+
+    public boolean bookRoom(int numberOfRooms, boolean isSuite) {
+        if (numberOfRooms <= 0) {
+            return false; // Ensure a valid number of rooms is requested
+        }
+
+        if (isSuite) {
+            if (getAvailableSuites() >= numberOfRooms) {
+                bookedSuites += numberOfRooms;
+                return true;
+            }
+        } else {
+            if (getAvailableRooms() >= numberOfRooms) {
+                bookedBasicRooms += numberOfRooms;
+                return true;
+            }
+        }
+
+        return false; // Return false if the booking can't be made
+    }
+
+    public int getAvailableSuites() {
         return numberOfSuites - bookedSuites;
     }
-    public int getAvailableRooms(){
+
+    public int getAvailableRooms() {
         return numberOfRooms - bookedBasicRooms;
-    }
-
-    //ACTIONS
-
-    public boolean bookRoom (int numberOfRooms, boolean isSuite){
-        if (numberOfRooms <= 0){
-            return false;
-        }
     }
 }

@@ -42,28 +42,26 @@ public class Employee {
     public void punchIn(double time) {
         startTime = time;
     }
-    //overloading
 
-    public void punchIn(){
-        LocalDateTime now = LocalDateTime.now();
-        int hour = now.getHour();
-        int minute = now.getMinute();
-        double time = hour + (minute/60);
-        startTime = time;
-    }
-
-    public void punchOut(){
-        LocalDateTime now = LocalDateTime.now();
-        int hour = now.getHour();
-        int minute = now.getMinute();
-        double time = hour + (minute/60);
+    public void punchOut(double time) {
         double duration = time - startTime;
         hoursWorked += duration;
         startTime = 0;
     }
 
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        double time = hour + (minute / 60.0);
+        startTime = time;
+    }
 
-    public void punchOut(double time) {
+    public void punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        double time = hour + (minute / 60.0);
         double duration = time - startTime;
         hoursWorked += duration;
         startTime = 0;
