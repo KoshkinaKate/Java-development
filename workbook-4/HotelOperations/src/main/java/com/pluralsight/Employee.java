@@ -19,6 +19,10 @@ public class Employee {
         this.startTime = 0;
     }
 
+    public double getStartTime() {
+        return startTime;
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
