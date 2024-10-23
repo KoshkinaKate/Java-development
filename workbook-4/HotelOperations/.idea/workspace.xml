@@ -7,7 +7,6 @@
     <list default="true" id="7344c1c5-6545-41cd-9835-91d7ffcbb42d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../workbook-3/SearchInventoryMap/src/main/java/com/pluralsight/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-3/SearchInventoryMap/src/main/java/com/pluralsight/StoreApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pluralsight/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pluralsight/RoomTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.EmployeeTest.punchIn_GettingCheckInTime_RecordStartWorkingTime.executor": "Run",
     "JUnit.RoomTest.checkIn_RoomCondition_OccupiedAndDirty.executor": "Run",
     "JUnit.RoomTest.checkOut_RoomCondition_ShouldBeAvailable.executor": "Run",
     "JUnit.RoomTest.cleanRoom_RoomCondition_CleanRoom.executor": "Run",
@@ -56,7 +56,23 @@
       <recent name="com.pluralsight" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoomTest.cleanRoom_RoomCondition_CleanRoom">
+  <component name="RunManager" selected="JUnit.EmployeeTest.punchIn_GettingCheckInTime_RecordStartWorkingTime">
+    <configuration name="EmployeeTest.punchIn_GettingCheckInTime_RecordStartWorkingTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelOperations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pluralsight.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pluralsight" />
+      <option name="MAIN_CLASS_NAME" value="com.pluralsight.EmployeeTest" />
+      <option name="METHOD_NAME" value="punchIn_GettingCheckInTime_RecordStartWorkingTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomTest.checkIn_RoomCondition_OccupiedAndDirty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelOperations" />
       <extension name="coverage">
@@ -107,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeTest.punchIn_GettingCheckInTime_RecordStartWorkingTime" />
         <item itemvalue="JUnit.RoomTest.cleanRoom_RoomCondition_CleanRoom" />
         <item itemvalue="JUnit.RoomTest.checkOut_RoomCondition_ShouldBeAvailable" />
         <item itemvalue="JUnit.RoomTest.checkIn_RoomCondition_OccupiedAndDirty" />
