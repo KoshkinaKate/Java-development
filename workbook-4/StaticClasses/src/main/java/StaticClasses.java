@@ -21,20 +21,8 @@ public class StaticClasses {
         System.out.println("Please enter your suffix (Phd, Jr) ");
         String suffix = scanner.nextLine();
 
-
-        if (!prefix.isEmpty()){
-            lastName += ", " + prefix;
-        }
-        lastName += ", " + firstName;
-
-        if (!middleName.isEmpty()){
-            lastName += ", " + middleName;
-        }
-        if (!suffix.isEmpty()){
-            lastName += ", " + suffix;
-        }
-        System.out.println(lastName);
-
+        String fullName = NameFormatter.format(prefix, firstName, middleName, lastName, suffix );
+        System.out.println(fullName);
 
 
     }
