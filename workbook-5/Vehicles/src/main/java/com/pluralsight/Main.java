@@ -43,5 +43,9 @@ public class Main {
         craft.setCargoCapacity(50);
         craft.setAirCushionPressure(20);
 
+        slowRide.ride();
+
+        System.out.println("The color of the car is: " + coupeCar.getColor());
+
     }
 }

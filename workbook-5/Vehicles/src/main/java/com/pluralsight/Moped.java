@@ -11,6 +11,7 @@ public class Moped extends Vehicle{
         this.maxWeight = maxWeight;
     }
     public void ride(){
+        System.out.println("faaassst !!!");
 
     }
 }
