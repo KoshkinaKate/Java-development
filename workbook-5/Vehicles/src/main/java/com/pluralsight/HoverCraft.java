@@ -12,6 +12,6 @@ public class HoverCraft extends Vehicle{
     }
 
     public void hover(){
-        
+
     }
 }
