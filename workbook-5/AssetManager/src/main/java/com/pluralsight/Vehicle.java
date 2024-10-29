@@ -1,4 +1,7 @@
 package com.pluralsight;
+
+import java.time.LocalDate;
+
 //child - derived
 public class Vehicle extends Asset{
     private String makeModel;
@@ -38,8 +41,10 @@ public class Vehicle extends Asset{
     @Override
     public double getValue(){
         double value = getOriginalCost();
-        int now = 2024;
-        int age = now - year;
+        int currentYear = LocalDate.now().getYear();
+        int age = currentYear - year;
+
+        double value =0.0;
         if (age <=3 )
 
     }
