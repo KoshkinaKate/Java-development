@@ -48,6 +48,22 @@ public class House extends Asset {
 
     @Override
     public double getValue(){
+        double pricePerSqFt = 0;
+        switch (condition){
+            case 1:
+                pricePerSqFt = 180.00;
+                break;
+            case 2:
+                pricePerSqFt = 130.00;
+                break;
+            case 3:
+                pricePerSqFt = 90.00;
+            case 4:
+                pricePerSqFt = 80.00;
+            default:
+                break;
+        }
+        return (pricePerSqFt * squareFoot) + (0.25 * lotSize);
 
     }
 }

@@ -37,6 +37,11 @@ public class Vehicle extends Asset{
     }
     @Override
     public double getValue(){
-        
+        double value = getOriginalCost();
+        int now = 2024;
+        int age = now - year;
+        if (age <=3 )
+
     }
+
 }
