@@ -1,4 +1,4 @@
-package com.pluralsight.finance;
+package com.pluralsight;
 
 public class FinanceApplication {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class FinanceApplication {
 
         account1.deposit(100);
         account2.deposit(100);
-        
+
     }
 
 

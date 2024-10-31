@@ -1,6 +1,6 @@
-package com.pluralsight.finance;
+package com.pluralsight;
 
-public class House extends FixedAsset{
+public class House extends FixedAsset {
     private int yearBuilt;
     private int squareFeet;
     private int bedrooms;
@@ -13,10 +13,6 @@ public class House extends FixedAsset{
     }
 
     //methods
-
-    public void House (int yearBuilt, int squareFeet, int bedrooms){
-        System.out.println("Here is the house information");
-    }
 
     @Override
     public double getValue() {
