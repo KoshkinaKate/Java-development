@@ -7,10 +7,13 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         List<Person> people = listOfPeople();
+
         double averageAge = averageAgeOfPeople(people);
         System.out.println("Average age is: " + averageAge);
+
         double oldPerson = oldestPerson(people);
         System.out.println("The oldest person is: " + oldPerson);
+
         double youngPerson = youngestPerson(people);
         System.out.println("The youngest person is: " + youngPerson);
 
@@ -18,29 +21,18 @@ public class Program {
 
 
     public static List<Person> listOfPeople() {
-        Person person1 = new Person("Kate", "Koshkina", 28);
-        Person person2 = new Person("John", "Doe", 35);
-        Person person3 = new Person("Emma", "Smith", 42);
-        Person person4 = new Person("Liam", "Johnson", 25);
-        Person person5 = new Person("Olivia", "Brown", 31);
-        Person person6 = new Person("Noah", "Williams", 29);
-        Person person7 = new Person("Ava", "Jones", 33);
-        Person person8 = new Person("Ethan", "Garcia", 27);
-        Person person9 = new Person("Sophia", "Martinez", 30);
-        Person person10 = new Person("Mason", "Rodriguez", 36);
-
         List<Person> people = new ArrayList<>();
-        people.add(person1);
-        people.add(person2);
-        people.add(person3);
-        people.add(person4);
-        people.add(person5);
-        people.add(person6);
-        people.add(person7);
-        people.add(person8);
-        people.add(person9);
-        people.add(person10);
-
+        people.add(new Person("Kate", "Koshkina", 28));
+        people.add(new Person("Kot", "Koshk", 25));
+        people.add(new Person("John", "Doe", 35));
+        people.add(new Person("Emma", "Smith", 42));
+        people.add(new Person("Liam", "Johnson", 25));
+        people.add(new Person("Olivia", "Brown", 31));
+        people.add(new Person("Noah", "Williams", 29));
+        people.add(new Person("Ava", "Jones", 33));
+        people.add(new Person("Ethan", "Garcia", 27));
+        people.add(new Person("Sophia", "Martinez", 30));
+        people.add(new Person("Mason", "Rodriguez", 36));
 
         System.out.println("Search a person by first or last name");
         Scanner myScanner = new Scanner(System.in);
@@ -57,7 +49,6 @@ public class Program {
         if (!found) {
             System.out.println("No person was found, try again");
         }
-//        myScanner.close();
         return people;
 
     }
@@ -65,7 +56,7 @@ public class Program {
     public static double averageAgeOfPeople(List<Person> people){
         double totalAge = 0;
         for (Person person : people) {
-           totalAge += person.getAge();
+           totalAge += person.getAge(); //total age
         }
         return totalAge/ people.size();
     }
