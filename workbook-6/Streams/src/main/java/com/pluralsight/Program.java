@@ -6,7 +6,11 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+        listOfPeople();
+    }
 
+
+    public static List<Person> listOfPeople() {
         Person person1 = new Person("Kate", "Koshkina", 28);
         Person person2 = new Person("John", "Doe", 35);
         Person person3 = new Person("Emma", "Smith", 42);
@@ -38,16 +42,22 @@ public class Program {
         String name = myScanner.nextLine();
         boolean found = false;
         for (Person person : people) {
-            if (person.getFirstName().equalsIgnoreCase(name) || person.getLastName().equalsIgnoreCase(name)){
+            if (person.getFirstName().equalsIgnoreCase(name) || person.getLastName().equalsIgnoreCase(name)) {
                 System.out.println("Found in the system: " + person.getFirstName() + " " + person.getLastName() + " " + person.getAge());
                 found = true;
             }
-        } if (!found){
+        }
+        if (!found) {
             System.out.println("No person was found, try again");
         }
         myScanner.close();
-
+        return people;
 
     }
-    
+
+    public static double averageAgeOfPeople(){
+        
+        return 0;
+    }
 }
+
