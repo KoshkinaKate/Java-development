@@ -11,6 +11,8 @@ public class Program {
         System.out.println("Average age is: " + averageAge);
         double oldPerson = oldestPerson(people);
         System.out.println("The oldest person is: " + oldPerson);
+        double youngPerson = youngestPerson(people);
+        System.out.println("The youngest person is: " + youngPerson);
 
     }
 
@@ -69,7 +71,7 @@ public class Program {
     }
 
     public static double oldestPerson(List<Person> people){
-        double oldest = people.get(0).getAge();
+        double oldest = people.get(0).getAge(); //starts with 1st person if it passes > it goes to next
         for (Person person : people) {
             if( person.getAge() > oldest ){
                 oldest = person.getAge();
@@ -77,5 +79,15 @@ public class Program {
         }
         return oldest;
     }
+    public static double youngestPerson(List<Person> people){
+        double youngest = people.get(0).getAge(); //starts with 1st person if it passes > it goes to next
+        for (Person person : people) {
+            if( person.getAge() < youngest ){
+                youngest = person.getAge();
+            }
+        }
+        return youngest;
+    }
+
 }
 
