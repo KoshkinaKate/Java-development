@@ -6,7 +6,12 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-        listOfPeople();
+        List<Person> people = listOfPeople();
+        double averageAge = averageAgeOfPeople(people);
+        System.out.println("Average age is: " + averageAge);
+        double oldPerson = oldestPerson(people);
+        System.out.println("The oldest person is: " + oldPerson);
+
     }
 
 
@@ -50,14 +55,27 @@ public class Program {
         if (!found) {
             System.out.println("No person was found, try again");
         }
-        myScanner.close();
+//        myScanner.close();
         return people;
 
     }
 
-    public static double averageAgeOfPeople(){
-        
-        return 0;
+    public static double averageAgeOfPeople(List<Person> people){
+        double totalAge = 0;
+        for (Person person : people) {
+           totalAge += person.getAge();
+        }
+        return totalAge/ people.size();
+    }
+
+    public static double oldestPerson(List<Person> people){
+        double oldest = people.get(0).getAge();
+        for (Person person : people) {
+            if( person.getAge() > oldest ){
+                oldest = person.getAge();
+            }
+        }
+        return oldest;
     }
 }
 
