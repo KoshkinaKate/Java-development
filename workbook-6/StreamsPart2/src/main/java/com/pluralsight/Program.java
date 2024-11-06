@@ -36,6 +36,7 @@ public class Program {
 //        }
 
         double averageAge = calculateAverageAge(people);
+//        people.forEach(System.out::println);
         System.out.println("Average age: " + averageAge);
 
         int oldestAge = findOldestAge(people);
@@ -63,30 +64,46 @@ public class Program {
     }
 
     private static double calculateAverageAge(List<Person> people) {
-        int totalAge = 0;
-        for (Person person : people) {
-            totalAge += person.getAge();
-        }
-        return (double) totalAge / people.size();
+        return people.stream()
+                .mapToInt(person -> person.getAge()) //Person::getAge
+                .average()
+                .orElse(0.0); //when list is empty -ensures to return double 0.0
     }
 
+//        int totalAge = 0;
+//        for (Person person : people) {
+//            totalAge += person.getAge();
+//        }
+//        return (double) totalAge / people.size();
+
+
     private static int findOldestAge(List<Person> people) {
-        int maxAge = Integer.MIN_VALUE;
-        for (Person person : people) {
-            if (person.getAge() > maxAge) {
-                maxAge = person.getAge();
-            }
-        }
-        return maxAge;
+        return people.stream()
+                .mapToInt(person -> person.getAge())
+                .max()
+                .orElse(0);
+
+//        int maxAge = Integer.MIN_VALUE;
+//        for (Person person : people) {
+//            if (person.getAge() > maxAge) {
+//                maxAge = person.getAge();
+//            }
+//        }
+//        return maxAge;
     }
 
     private static int findYoungestAge(List<Person> people) {
-        int minAge = Integer.MAX_VALUE;
-        for (Person person : people) {
-            if (person.getAge() < minAge) {
-                minAge = person.getAge();
-            }
-        }
-        return minAge;
+        return people.stream()
+                .mapToInt(person -> person.getAge())
+                .min()
+                .orElse(0);
     }
+//        int minAge = Integer.MAX_VALUE;
+//        for (Person person : people) {
+//            if (person.getAge() < minAge) {
+//                minAge = person.getAge();
+//            }
+//        }
+//        return minAge;
+//    }
 }
