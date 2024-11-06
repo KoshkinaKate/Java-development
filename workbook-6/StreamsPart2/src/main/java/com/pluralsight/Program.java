@@ -27,9 +27,13 @@ public class Program {
 //        }
 
         System.out.println("People with matching name:");
-        for (Person person : matchingPeople) {
-            System.out.println(person.getFirstName() + " " + person.getLastName());
-        }
+        matchingPeople.stream()
+                .map(person-> person.getFirstName() + " " + person.getLastName())
+                .forEach(System.out::println);
+
+//        for (Person person : matchingPeople) {
+//            System.out.println(person.getFirstName() + " " + person.getLastName());
+//        }
 
         double averageAge = calculateAverageAge(people);
         System.out.println("Average age: " + averageAge);
