@@ -70,8 +70,9 @@ FROM Suppliers;
 
 -- Question 16
 SELECT *
-FROM Suppliers
-WHERE CompanyName LIKE "Tokyo Traders";
+FROM Products
+WHERE SupplierID =4;
+
 
 
 
