@@ -40,15 +40,14 @@ public class Main {
             System.out.println("--------------------------------------------------------------------------");
 
             while (results.next()) {
-                String id = results.getString("ID");
+                int id = results.getInt("ID");
                 String name = results.getString("Name");
-                String price = results.getString("Price");
-                String stock = results.getString("Stock");
+                double price = results.getDouble("Price");
+                int stock = results.getInt("Stock");
 
                 // Print each row of data
                 System.out.printf("%-10s %-40s %-15s %-10s%n", id, name, price, stock);
             }
-
 
             results.close();
             preparedStatement.close();
