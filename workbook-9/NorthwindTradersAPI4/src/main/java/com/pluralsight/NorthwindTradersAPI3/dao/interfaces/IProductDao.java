@@ -11,4 +11,7 @@ public interface IProductDao {
     Product getById(int id);
 
     Product insert(Product product);
+
+    Product update(int id, Product product);
+
 }

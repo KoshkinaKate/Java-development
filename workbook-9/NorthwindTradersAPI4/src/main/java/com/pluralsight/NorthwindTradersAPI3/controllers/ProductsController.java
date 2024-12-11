@@ -35,6 +35,12 @@ public class ProductsController {
         return productDao.insert(product);
     }
 
+    @RequestMapping (path = "/products/{productId}", method = RequestMethod.PUT)
+    public void updateProduct(@PathVariable int productId, @RequestBody Product product){
+        productDao.update(productId, product);
+    }
+
+
 
 
 }
