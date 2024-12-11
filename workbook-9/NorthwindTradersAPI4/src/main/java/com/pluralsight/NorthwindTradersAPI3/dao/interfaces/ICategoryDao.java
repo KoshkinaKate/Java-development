@@ -13,4 +13,6 @@ public interface ICategoryDao {
     Category insert(Category category);
 
     Category update (int Id, Category category );
+
+    void delete(int id);
 }

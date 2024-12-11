@@ -40,4 +40,9 @@ public class CategoriesController {
         categoryDao.update(categoryId, category);
     }
 
+    @RequestMapping(path ="/categories/{categoryId}", method = RequestMethod.DELETE)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void deleteCategory(@PathVariable int categoryId){
+        categoryDao.delete(categoryId);
+    }
 }
